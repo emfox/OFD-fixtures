@@ -1,5 +1,5 @@
 OFD fixtures contains sample documents from two sources. Neither is authored
-here, and this repository claims no copyright over it.
+here, and this repository claims no copyright over either.
 
 ofdrw/
   Source:  https://github.com/ofdrw/ofdrw
@@ -8,14 +8,19 @@ ofdrw/
            per-file origin paths are recorded in manifest.json.
 
 gb-t-33190/
-  Source:  https://raw.atomgit.com/open-source-toolkit/886653
+  Source:  https://gitcode.com/open-source-toolkit/886653
+           announced at
+           https://blog.csdn.net/gitblog_09791/article/details/143283031
   Licence: published as conformance material alongside GB/T 33190-2016
            (Information technology - Open fixed-layout document). The sample
            set states no separate licence of its own; it is redistributed here
            for interoperability testing on the understanding that the samples
            exist to be parsed and validated.
-  Files:   unpacked from ofd标准测试文件.zip inside Desktop.zip, filenames
-           converted from GBK to UTF-8.
+  Files:   Desktop.zip as published (sha256 dcbd0e24…), the archive
+           ofd标准测试文件.zip inside it, and that archive unpacked into the
+           thirteen .ofd documents beside them, filenames converted from GBK
+           to UTF-8. One unrelated image carried inside Desktop.zip is not
+           redistributed here.
 
 Takedown: if you hold rights to any file in this repository and object to its
 presence, open an issue at https://github.com/emfox/OFD-fixtures/issues and it

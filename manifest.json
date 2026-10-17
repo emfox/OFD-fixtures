@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "sets": {
     "ofdrw": {
       "upstream": "https://github.com/ofdrw/ofdrw",
@@ -119,72 +119,83 @@
       }
     },
     "gb-t-33190": {
-      "upstream": "https://raw.atomgit.com/open-source-toolkit/886653",
+      "upstream": "https://gitcode.com/open-source-toolkit/886653",
+      "page": "https://blog.csdn.net/gitblog_09791/article/details/143283031",
       "licence": "Published with GB/T 33190-2016 as conformance material.",
-      "note": "Unpacked from ofd标准测试文件.zip inside Desktop.zip.",
+      "note": "gb-t-33190/Desktop.zip is the publisher's archive exactly as downloaded; ofd标准测试文件.zip inside it is also kept, so the original nesting survives; the .ofd files beside them are that archive unpacked, GBK names restored.",
       "files": {
+        "Desktop.zip": {
+          "origin": "Desktop.zip as published on gitcode.com/open-source-toolkit/886653",
+          "bytes": 11616209,
+          "sha256": "dcbd0e24cab4fdb251d149a7aeca711faeda513ababaea1d72080d35bcd1eb67"
+        },
+        "ofd标准测试文件.zip": {
+          "origin": "ofd标准测试文件.zip, extracted from Desktop.zip",
+          "bytes": 10193124,
+          "sha256": "e9f956f4f97cb8abe5a3783f63550ce48e4e7b10b23768c00a83603c7f950c2c"
+        },
         "6.1.001 Entry全部不压缩.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.1.001 Entry全部不压缩.ofd",
           "bytes": 865405,
           "sha256": "c4a9779b4fd70b41590c61bf15e570c4f963a0c9ad0fd76bbaadb1d4d51e6461"
         },
         "6.1.002 Entry全部压缩.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.1.002 Entry全部压缩.ofd",
           "bytes": 721210,
           "sha256": "52687a2e5268be86d5ac901f06240c77a515acfcd9817282bf5e1ef0efbf0587"
         },
         "6.1.003 Entry合理压缩.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.1.003 Entry合理压缩.ofd",
           "bytes": 748482,
           "sha256": "0b05a754cbd95d8f2106b9e82d90c5d4c1fbb35e76c8bdfcb63f017ee1394d78"
         },
         "6.1.004 Entry不合理压缩.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.1.004 Entry不合理压缩.ofd",
           "bytes": 847687,
           "sha256": "d7c3f00f0f47910c60720dcee46f47630f75aa91f24994c131ef54a0c9327202"
         },
         "6.1.005 OFD和Document在ZIP流后部.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.1.005 OFD和Document在ZIP流后部.ofd",
           "bytes": 748470,
           "sha256": "f9675ba0b6acfaf4a250aaccbfe626ab727a3bfc7d28a9aaf5e85c6a149e708c"
         },
         "6.2.001 正常文件结构.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.001 正常文件结构.ofd",
           "bytes": 720809,
           "sha256": "ecef39bf068961a7186c7dfa16abb65b9b6110a9e55a44acc1ef38963aaf2ef3"
         },
         "6.2.002 平行结构文件.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.002 平行结构文件.ofd",
           "bytes": 719475,
           "sha256": "37db2c0a5136d7fdcd6a61fe21a718bb32550c4a0bf7d22feb4668fc8b306d59"
         },
         "6.2.003 使用相对路径.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.003 使用相对路径.ofd",
           "bytes": 720454,
           "sha256": "dfc8fd0bb3c7c3be836bc28bf19b5e1cb2c78525d9f013aedca4877bd3e1edc0"
         },
         "6.2.004_1 文件目录结构与推荐的不符.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.004_1 文件目录结构与推荐的不符.ofd",
           "bytes": 720379,
           "sha256": "0873ca1315c4b5e9e89a8e4931e72cca18bdff22750ad2ca6de7b2420c6da429"
         },
         "6.2.004_2 路径中含有空格.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.004_2 路径中含有空格.ofd",
           "bytes": 720363,
           "sha256": "c7932ec8e190c7345a679e4baaf62ee693f530f72b4f27c9ea2d34235dbdf825"
         },
         "6.2.004_3 路径中含有转义字符.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.004_3 路径中含有转义字符.ofd",
           "bytes": 720384,
           "sha256": "2535ae99e5093eec811e7cea3931feebc4770d6bb8adca7ac8011227aaf5322c"
         },
         "6.2.005 文件目录结构乱序.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.005 文件目录结构乱序.ofd",
           "bytes": 720436,
           "sha256": "246bcb8030c45ae8c3ddf28e38edb5700a28c0501166ef5ddeabf79c942b2f17"
         },
         "6.2.006 各级目录下有无用内容.ofd": {
-          "origin": "ofd标准测试文件.zip",
+          "origin": "ofd标准测试文件.zip::6.2.006 各级目录下有无用内容.ofd",
           "bytes": 1533892,
           "sha256": "9e07eab5bd60a6bb47367c2ed5bf929493ae8c61c3a1417ec8e992fb530d5844"
         }
