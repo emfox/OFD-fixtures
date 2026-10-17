@@ -16,9 +16,12 @@ hashes against that manifest knows exactly what it parsed.
 ## Layout
 
 ```
-ofdrw/          22 files, 15 MB
+ofdrw/                   22 files, 15 MB
 gb-t-33190/
-  Desktop.zip   11.6 MB   the publisher's archive, exactly as distributed
+  Desktop.zip            11.6 MB   the publisher's archive, exactly as distributed
+gb-t-33190-text/
+  GBT33190-2016.pdf       4.8 MB   the standard, as issued
+  GBT33190-2016.zh_CN.md  140 KB   a transcription of its text
 manifest.json
 ```
 
@@ -26,6 +29,7 @@ manifest.json
 | --- | --- | --- |
 | `ofdrw/` | [ofdrw/ofdrw](https://github.com/ofdrw/ofdrw) | Apache-2.0 |
 | `gb-t-33190/` | [open-source-toolkit/886653](https://gitcode.com/open-source-toolkit/886653) | Conformance material published alongside GB/T 33190-2016 |
+| `gb-t-33190-text/` | [GB/T 33190-2016 on openstd.samr.gov.cn](https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AF6682D939116B6F5EED53D01A9DB5D) | None granted: the standard is not open-licensed |
 
 ### ofdrw/
 
@@ -68,6 +72,40 @@ the original archive, not because anything uses it.
 Filenames carry the clause they exercise — `6.2.001 正常文件结构.ofd` is the
 well-formed baseline, `6.1.004 Entry不合理压缩.ofd` a badly compressed archive,
 and so on.
+
+### gb-t-33190-text/
+
+The standard's own text: the issued PDF, and a Markdown transcription of it.
+
+The PDF is the document as published — 132 pages, PDF 1.5, unmodified, so its
+hash is the hash of what the publisher issued. It is here rather than in
+SteleOFD because a Chinese national standard is not open-licensed: the
+implementation repository should not carry the standard's text, and this
+repository is where material that must be pinned but cannot be licensed
+already lives.
+
+`GBT33190-2016.zh_CN.md` is a reading of the same document, produced by
+`scripts/pdf_to_markdown.py` in SteleOFD and kept beside it so the two can be
+compared. It is UTF-8 and holds the text in Chinese, as the standard prints it.
+
+What the transcription is held to:
+
+| | |
+| --- | --- |
+| Numbered headings | 107 of 107, at the numbers the standard prints |
+| Tables | 73, each with its caption, each one table even where the page broke it |
+| Schema listings | 25, the annexes' XML read out of the drawing runs |
+| Contents | every entry, with its page |
+| Empty blocks | none |
+
+It is not the standard. Paragraphs are joined and the layout is gone; a table
+cell that holds a list is one cell with the list's lines in it; the schemas'
+Latin is set in a face whose space has no width, so their attributes are
+re-spaced by rule and not by measurement. Where the two differ, the PDF
+governs.
+
+Reading the standard is easier in the Markdown; quoting it, or checking what a
+clause actually says, needs the PDF.
 
 ## manifest.json
 
@@ -132,6 +170,7 @@ would save little and would cost the property above.
 
 ## Rights
 
-This repository redistributes third-party material. It grants no licence of its
+This repository redistributes third-party material, including a Chinese
+national standard that grants no licence for redistribution. It grants no licence of its
 own beyond what each upstream already grants; see [NOTICE](NOTICE). If you hold
 rights to a file here and want it removed, open an issue.

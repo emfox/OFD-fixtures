@@ -1,5 +1,5 @@
-OFD fixtures contains sample documents from two sources. Neither is authored
-here, and this repository claims no copyright over either.
+OFD fixtures contains material from three sources. None of it is authored
+here, and this repository claims no copyright over any of it.
 
 ofdrw/
   Source:  https://github.com/ofdrw/ofdrw
@@ -20,6 +20,23 @@ gb-t-33190/
            dcbd0e24cab4fdb251d149a7aeca711faeda513ababaea1d72080d35bcd1eb67).
            It contains ofd标准测试文件.zip, which contains the thirteen .ofd
            documents; both archives store their Chinese filenames as GBK.
+
+gb-t-33190-text/
+  Source:  GB/T 33190-2016, Information technology - Open fixed-layout
+           document (OFD), issued 2016-10-13, effective 2017-05-01. The
+           record of the standard is
+           https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AF6682D939116B6F5EED53D01A9DB5D
+  Licence: none granted here. A Chinese national standard is not open
+           licensed, and this repository claims no right over it. The PDF is
+           the issued document, kept unmodified (5,068,468 bytes, sha256
+           3c6da794cd5d2c33d968668583e5c0c909d1c0c554a2de37fb02788b72471051).
+           The Markdown beside it is a transcription of the same document,
+           made mechanically by SteleOFD and offered so that the standard can
+           be read and searched; it is a derived reading, not the standard,
+           and the PDF governs wherever the two differ. Both files are here
+           for reference and interoperability work only. Neither is used as
+           a test fixture by SteleOFD, whose own repository does not carry
+           the standard's text.
 
 Takedown: if you hold rights to any file in this repository and object to its
 presence, open an issue at https://github.com/emfox/OFD-fixtures/issues and it
