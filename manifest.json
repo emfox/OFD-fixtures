@@ -144,14 +144,14 @@
         },
         "GBT33190-2016.zh_CN.md": {
           "origin": "transcribed from GBT33190-2016.pdf by scripts/pdf_to_markdown.py",
-          "bytes": 143793,
-          "sha256": "9d738885f7f15fd0c58bb9c198fae775e0c4739aeab91a2e19a9f529906a46e1",
-          "note": "UTF-8, the text in Chinese as the standard prints it. 107 numbered headings, 73 tables, 25 schema listings."
+          "bytes": 143765,
+          "sha256": "74bd389082f7c9da2c41a835e0877e9c005d72dddab90d31f662368641f62cca",
+          "note": "UTF-8, the text in Chinese as the standard prints it. 108 numbered headings, 73 tables, 13 schema listings."
         },
         "scripts/pdf_to_markdown.py": {
           "origin": "written for this repository, to transcribe GBT33190-2016.pdf",
-          "bytes": 35819,
-          "sha256": "20b1753931549b34ebf52f73f91e37e3125ac779114be335b172ff832b53dffa",
+          "bytes": 38402,
+          "sha256": "a507664ada3901561001c0df2b0452c0da2a1f4f3e5c223841c65dba4971a5f2",
           "note": "Reproduces GBT33190-2016.zh_CN.md from GBT33190-2016.pdf byte for byte."
         }
       }

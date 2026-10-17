@@ -18,10 +18,10 @@ live here, where the material that must be pinned but cannot be licensed
 already lives.
 
 What does belong in SteleOFD is the part that turns this text into something
-the implementation checks itself against: `scripts/extract_clauses.py` reads
-the clause numbers out of the PDF and writes `compliance/gb-t-33190.toml`, and
-`scripts/check_compliance.py` holds that register to the test suite. Those read
-the standard as an input, never redistributing it.
+the implementation checks itself against: `scripts/gbt33190.py` reads the
+clause numbers and the annex A schemas out of this transcription, and
+`scripts/check_compliance.py` holds the register it writes to the test suite.
+Those read the standard as an input, never redistributing it.
 
 ## The PDF
 
@@ -31,17 +31,17 @@ Unmodified, so its hash is the hash of what was issued.
 
 ## The transcription
 
-`GBT33190-2016.zh_CN.md` — UTF-8, 143,793 bytes, sha256
-`9d738885f7f15fd0c58bb9c198fae775e0c4739aeab91a2e19a9f529906a46e1`.
+`GBT33190-2016.zh_CN.md` — UTF-8, 143,765 bytes, sha256
+`74bd389082f7c9da2c41a835e0877e9c005d72dddab90d31f662368641f62cca`.
 The text in Chinese, as the standard prints it.
 
 What it is held to:
 
 | | |
 | --- | --- |
-| Numbered headings | 107 of 107, at the numbers the standard prints |
+| Numbered headings | 108 of 108, at the numbers the standard prints |
 | Tables | 73, each under its caption, each one table even where a page broke it |
-| Schema listings | 25, the annexes' XML read out of the drawing runs |
+| Schema listings | 13, one per schema of annex A, each complete |
 | Contents | every entry, with its page |
 | Empty blocks | none |
 
@@ -79,6 +79,14 @@ extraction, and the script's own docstring explains each against the PDF:
 3. **A table row is set on three baselines.** Any reading that goes by baseline
    loses the row, so tables are rebuilt from the rules the producer draws and
    the text is assigned to the box it falls into.
+
+Two follow from the way the annexes are printed. A schema's annotation that
+runs past the margin is broken there and its second line starts back at the
+left of the text block, where it reads as prose and would close the listing
+(`Res.xsd` and `CustomTags.xsd` both open with one); it is joined back to the
+comment it belongs to. And `OFD.xsd` is interrupted by an example of the schema
+in use, so its listing is one fence from the declaration to the closing tag
+rather than one fence per page of the annex.
 
 Three smaller ones follow from the same cause — a font whose space has no
 width. The schemas' attributes come out run together (`elementname="OFD"`) and
