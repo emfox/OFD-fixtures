@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "sets": {
+    "ofdrw": {
+      "upstream": "https://github.com/ofdrw/ofdrw",
+      "licence": "Apache-2.0",
+      "note": "The reference Java implementation's own test resources.",
+      "files": {
+        "1.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/1.ofd",
+          "bytes": 16048,
+          "sha256": "bf41627e626a0cd194c19c37e258f6d9b74b56d8e66541e82f543ae047ab8ad9"
+        },
+        "20240531141733.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/20240531141733.ofd",
+          "bytes": 46091,
+          "sha256": "757c576d18e5f2278b42a7a6c99c4e5ec2b4196e1f7ed129db4f614acfccdfdc"
+        },
+        "999.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/999.ofd",
+          "bytes": 29752,
+          "sha256": "a2b9080ae35184135160c48ce45fb609c35d5ecfdb538ebc16132c48a2186a80"
+        },
+        "SignScaleError.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/SignScaleError.ofd",
+          "bytes": 17438,
+          "sha256": "7999a96a8426eecde425e020dfcab7ed4bfa5e2d00f24482418e12596b4247c3"
+        },
+        "V4RideRight.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/V4RideRight.ofd",
+          "bytes": 39170,
+          "sha256": "3011c7b0c3c73f74433d0068a3e67c3b5d71b077627b2fb54933f0a66eba0473"
+        },
+        "ano.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/ano.ofd",
+          "bytes": 718318,
+          "sha256": "f80678d13582927311018a6bbdb9c3cc62b8721ee862f0899d14d7bb92c22435"
+        },
+        "containsJPEG.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/containsJPEG.ofd",
+          "bytes": 898382,
+          "sha256": "2cb4f2c28b2593a803f7f2516fc100ba6277a48816c4175e8636e0ed25c800bb"
+        },
+        "draw_param_ref.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/draw_param_ref.ofd",
+          "bytes": 33402,
+          "sha256": "525eba2e09a4d7ac01a05bc176146ee9ecf5b1184fa3b909cc15599803493700"
+        },
+        "h.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/h.ofd",
+          "bytes": 73148,
+          "sha256": "76fd71cbcab2bcdd582fc24fcf32c7f1a2575af1bd11fcd7b3e88319b42c37c1"
+        },
+        "helloworld.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/helloworld.ofd",
+          "bytes": 1651,
+          "sha256": "a7b6f9eceb7ca4eafc73a318ac06f5476af6010d0dbcc99337912049748e141e"
+        },
+        "intro-数科.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/intro-数科.ofd",
+          "bytes": 7490390,
+          "sha256": "df7bf847df8c6e6416180ee5cbcfdc13b3bf6ab5314b12958588c709329374f3"
+        },
+        "n.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/n.ofd",
+          "bytes": 39835,
+          "sha256": "306dba9b790fe29af0cd1b365ef259c427319e0ba39c3a5f08dc8eaa2d63147c"
+        },
+        "pattern类型.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/pattern类型.ofd",
+          "bytes": 490897,
+          "sha256": "580b21a5e3ad52844eef70a3cfd4e073f4f42882f29206ca45f863e80f78ddaf"
+        },
+        "signout.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/signout.ofd",
+          "bytes": 158072,
+          "sha256": "ed321ed91a2b27c875ec60dcab5e409715a3d7d51735bd06616ba14a64866abb"
+        },
+        "test-ofda.ofd": {
+          "origin": "ofdrw-archive/src/test/resources/test-ofda.ofd",
+          "bytes": 1629,
+          "sha256": "48493a64c5cd63d36e793e7f7c31524322df4342e7746b700c3617b0a0a066c9"
+        },
+        "testImageNotFound.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/testImageNotFound.ofd",
+          "bytes": 173623,
+          "sha256": "1fbdf67be374c2b453ef8a07051a697dcbbb32117cc7835d2639552101ca953c"
+        },
+        "testImageOverridePage.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/testImageOverridePage.ofd",
+          "bytes": 255199,
+          "sha256": "2ea354ac77289de7baf0170dd96dc8505577b00f6807898a50c1776cd44fd217"
+        },
+        "testPathClip.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/testPathClip.ofd",
+          "bytes": 784902,
+          "sha256": "ecfb92f9ab4d394cd574713f5efe2b8836d9ad60de616c043e7b4c702244f87e"
+        },
+        "testPathFillOpacity.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/testPathFillOpacity.ofd",
+          "bytes": 65178,
+          "sha256": "054a863d6791867589235fa5b4e7ecd79f13edcae7c0d8f919c74672fcfad7bf"
+        },
+        "y.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/y.ofd",
+          "bytes": 2209020,
+          "sha256": "c1a8c3b55335fbbb8a71ff5aef2844cc0883cdf571727a1a74f1f9bd0a928d48"
+        },
+        "z.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/z.ofd",
+          "bytes": 39704,
+          "sha256": "ae942157e68402aced7c604d0d17b6421f276cadbab363fa781fea5f948b3596"
+        },
+        "zsbk.ofd": {
+          "origin": "ofdrw-converter/src/test/resources/zsbk.ofd",
+          "bytes": 1557477,
+          "sha256": "c010c33b10ad91786eaad2de63f9a18ef4a91f96b5e41ba731505fcde9073845"
+        }
+      }
+    },
+    "gb-t-33190": {
+      "upstream": "https://raw.atomgit.com/open-source-toolkit/886653",
+      "licence": "Published with GB/T 33190-2016 as conformance material.",
+      "note": "Unpacked from ofd标准测试文件.zip inside Desktop.zip.",
+      "files": {
+        "6.1.001 Entry全部不压缩.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 865405,
+          "sha256": "c4a9779b4fd70b41590c61bf15e570c4f963a0c9ad0fd76bbaadb1d4d51e6461"
+        },
+        "6.1.002 Entry全部压缩.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 721210,
+          "sha256": "52687a2e5268be86d5ac901f06240c77a515acfcd9817282bf5e1ef0efbf0587"
+        },
+        "6.1.003 Entry合理压缩.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 748482,
+          "sha256": "0b05a754cbd95d8f2106b9e82d90c5d4c1fbb35e76c8bdfcb63f017ee1394d78"
+        },
+        "6.1.004 Entry不合理压缩.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 847687,
+          "sha256": "d7c3f00f0f47910c60720dcee46f47630f75aa91f24994c131ef54a0c9327202"
+        },
+        "6.1.005 OFD和Document在ZIP流后部.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 748470,
+          "sha256": "f9675ba0b6acfaf4a250aaccbfe626ab727a3bfc7d28a9aaf5e85c6a149e708c"
+        },
+        "6.2.001 正常文件结构.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 720809,
+          "sha256": "ecef39bf068961a7186c7dfa16abb65b9b6110a9e55a44acc1ef38963aaf2ef3"
+        },
+        "6.2.002 平行结构文件.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 719475,
+          "sha256": "37db2c0a5136d7fdcd6a61fe21a718bb32550c4a0bf7d22feb4668fc8b306d59"
+        },
+        "6.2.003 使用相对路径.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 720454,
+          "sha256": "dfc8fd0bb3c7c3be836bc28bf19b5e1cb2c78525d9f013aedca4877bd3e1edc0"
+        },
+        "6.2.004_1 文件目录结构与推荐的不符.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 720379,
+          "sha256": "0873ca1315c4b5e9e89a8e4931e72cca18bdff22750ad2ca6de7b2420c6da429"
+        },
+        "6.2.004_2 路径中含有空格.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 720363,
+          "sha256": "c7932ec8e190c7345a679e4baaf62ee693f530f72b4f27c9ea2d34235dbdf825"
+        },
+        "6.2.004_3 路径中含有转义字符.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 720384,
+          "sha256": "2535ae99e5093eec811e7cea3931feebc4770d6bb8adca7ac8011227aaf5322c"
+        },
+        "6.2.005 文件目录结构乱序.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 720436,
+          "sha256": "246bcb8030c45ae8c3ddf28e38edb5700a28c0501166ef5ddeabf79c942b2f17"
+        },
+        "6.2.006 各级目录下有无用内容.ofd": {
+          "origin": "ofd标准测试文件.zip",
+          "bytes": 1533892,
+          "sha256": "9e07eab5bd60a6bb47367c2ed5bf929493ae8c61c3a1417ec8e992fb530d5844"
+        }
+      }
+    }
+  }
+}
