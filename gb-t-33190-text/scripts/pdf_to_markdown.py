@@ -49,6 +49,9 @@ import fitz
 
 # The running head, and the folio in either numbering.
 HEADER = re.compile(r"^GB/T\s*33190\s*[—–-]\s*2016$")
+# A line that opens in Chinese: the tail of a comment the margin broke, or a
+# heading, which is told apart by whether a listing is open.
+CJK_LEAD = re.compile(r"^[\u4e00-\u9fff]")
 ROMAN = re.compile(r"^[IVXLC\u2160-\u217f]+$")
 # Where the text column starts and ends.
 COLUMN_LEFT, COLUMN_RIGHT = 60.0, 536.0
@@ -502,8 +505,27 @@ def is_schema_line(text: str) -> bool:
     missing throughout -- `attribute` and `name` run together -- so the line
     is kept exactly as the standard sets it rather than repaired into
     something it says nowhere.
+
+    An annotation that runs past the margin is broken there, and the rest of
+    it starts at the left of the text block as prose, not as a tag: of the
+    schemas in annex A, `Res.xsd` and `CustomTags.xsd` both open with one.
+    Such a line continues the comment, and the caller joins it while a listing
+    is open rather than letting it close the listing, which would leave the
+    rest of the schema outside a fence. A Chinese line is not a listing line
+    on its own, so a heading of the standard is still read as a heading.
     """
     return bool(re.match(r"^[\w:./!?<-]", text)) and "<" in text or text.startswith(("xmlns", "target"))
+
+
+def continues_comment(line: str) -> bool:
+    """Whether a line of Chinese continues the annotation the line above opened.
+
+    The annotation is broken at the margin, so its second line carries no
+    mark of its own: what tells it apart from a heading that follows the
+    schema is the first line, which ends inside the comment rather than
+    after it.
+    """
+    return bool(re.search(r"<! ?--", line)) and "-->" not in line
 
 
 def is_cover(page: fitz.Page) -> bool:
@@ -668,6 +690,17 @@ class Emitter:
             self.schema_lines.append(unmangle(text))
             self.closed_schema = bool(SCHEMA_END.match(text))
             return
+        # An annotation that runs past the margin is broken there, and the
+        # rest of it starts at the left of the text block as prose. It is
+        # still the comment -- `Res.xsd` and `CustomTags.xsd` each open with
+        # one -- so it goes back inside the listing rather than closing it.
+        # A heading the standard prints after a schema opens in Chinese too,
+        # and is told apart by the comment above it: a heading never follows
+        # a line that is still inside one.
+        if self.schema_lines and CJK_LEAD.match(text) and continues_comment(self.schema_lines[-1]):
+            self.schema_lines[-1] = unmangle(self.schema_lines[-1] + text)
+            self.closed_schema = bool(SCHEMA_END.match(text))
+            return
         # Anything that is not a line of a listing closes the listing.
         self.close_listing()
         if TERM.match(text):
@@ -788,6 +821,15 @@ class Emitter:
     def block(self, text: str) -> None:
         """Close the open paragraph and append a block of its own."""
         self.flush()
+        # A listing interrupted before its closing tag -- the annex prints an
+        # example between the two halves of `OFD.xsd` -- carries on in the
+        # block that follows rather than opening a second fence with no
+        # declaration of its own. Closing the fence there would split one
+        # schema into two listings, the second of which looks like an example.
+        if text.startswith("```xml") and self.blocks and self.blocks[-1].startswith("```xml"):
+            if not SCHEMA_END.match(self.blocks[-1].rsplit("\n", 1)[-1].strip()):
+                self.blocks[-1] = self.blocks[-1] + "\n" + text.removeprefix("```xml\n").rstrip("`\n")
+                return
         self.blocks.append(text)
 
     def drop(self) -> None:
