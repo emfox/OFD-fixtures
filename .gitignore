@@ -1,0 +1,8 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Editor and OS noise
+.DS_Store
+*.swp
+*~

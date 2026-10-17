@@ -1,0 +1,22 @@
+OFD fixtures contains sample documents from two sources. Neither is authored
+here, and this repository claims no copyright over it.
+
+ofdrw/
+  Source:  https://github.com/ofdrw/ofdrw
+  Licence: Apache License 2.0
+  Files:   test resources of the ofdrw modules, copied unmodified. The
+           per-file origin paths are recorded in manifest.json.
+
+gb-t-33190/
+  Source:  https://raw.atomgit.com/open-source-toolkit/886653
+  Licence: published as conformance material alongside GB/T 33190-2016
+           (Information technology - Open fixed-layout document). The sample
+           set states no separate licence of its own; it is redistributed here
+           for interoperability testing on the understanding that the samples
+           exist to be parsed and validated.
+  Files:   unpacked from ofd标准测试文件.zip inside Desktop.zip, filenames
+           converted from GBK to UTF-8.
+
+Takedown: if you hold rights to any file in this repository and object to its
+presence, open an issue at https://github.com/emfox/OFD-fixtures/issues and it
+will be removed.
