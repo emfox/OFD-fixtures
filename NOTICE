@@ -37,6 +37,9 @@ gb-t-33190-text/
            for reference and interoperability work only. Neither is used as
            a test fixture by SteleOFD, whose own repository does not carry
            the standard's text.
+           scripts/pdf_to_markdown.py is written for this repository and does
+           nothing but turn the PDF above into the Markdown above; it is here
+           rather than in SteleOFD for the same reason the text is.
 
 Takedown: if you hold rights to any file in this repository and object to its
 presence, open an issue at https://github.com/emfox/OFD-fixtures/issues and it

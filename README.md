@@ -22,6 +22,7 @@ gb-t-33190/
 gb-t-33190-text/
   GBT33190-2016.pdf       4.8 MB   the standard, as issued
   GBT33190-2016.zh_CN.md  140 KB   a transcription of its text
+  scripts/pdf_to_markdown.py       the transcription, written down
 manifest.json
 ```
 
@@ -85,8 +86,11 @@ repository is where material that must be pinned but cannot be licensed
 already lives.
 
 `GBT33190-2016.zh_CN.md` is a reading of the same document, produced by
-`scripts/pdf_to_markdown.py` in SteleOFD and kept beside it so the two can be
-compared. It is UTF-8 and holds the text in Chinese, as the standard prints it.
+`scripts/pdf_to_markdown.py` — which lives here too, beside the PDF, because
+its only output is the standard's text. It is UTF-8 and holds the text in
+Chinese, as the standard prints it. Rebuilding it from the PDF above
+reproduces it byte for byte; see [the set's own README](gb-t-33190-text/README.md)
+for the command and for what the script has to do to read this PDF.
 
 What the transcription is held to:
 
@@ -106,6 +110,12 @@ governs.
 
 Reading the standard is easier in the Markdown; quoting it, or checking what a
 clause actually says, needs the PDF.
+
+SteleOFD keeps only what consumes the text: `scripts/extract_clauses.py` reads
+the clause numbers out of the PDF into `compliance/gb-t-33190.toml`, and
+`scripts/check_compliance.py` holds that register to the test suite. Neither
+redistributes the standard, and the conversion that produces the Markdown is
+here rather than there.
 
 ## manifest.json
 

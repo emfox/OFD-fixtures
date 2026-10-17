@@ -135,7 +135,7 @@
       "upstream": "GB/T 33190-2016 as published by SAC/TC 260",
       "page": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AF6682D939116B6F5EED53D01A9DB5D",
       "licence": "The standard is not open-licensed. It is stored here for reference and interoperability work, and is not redistributed under any licence this repository can grant.",
-      "note": "The standard itself and a transcription of its text. The PDF is the issued document; the Markdown is a reading of it that was produced mechanically and checked clause by clause -- every numbered heading in the standard appears at the same number. Table rows are recovered from the rules the producer draws, so a table that runs over a page break is one table here. The transcription is not the standard: where the two differ, the PDF governs.",
+      "note": "The standard, a transcription of its text, and the transcription written down. The PDF is the issued document; the Markdown is a reading of it that was produced mechanically and checked clause by clause -- every numbered heading in the standard appears at the same number. Table rows are recovered from the rules the producer draws, so a table that runs over a page break is one table here. The script is here rather than in the implementation repository because its only output is the standard's text. The transcription is not the standard: where the two differ, the PDF governs.",
       "files": {
         "GBT33190-2016.pdf": {
           "origin": "33190-2016-gbt-cd-300.pdf, the issued PDF (132 pages, PDF 1.5)",
@@ -143,10 +143,16 @@
           "sha256": "3c6da794cd5d2c33d968668583e5c0c909d1c0c554a2de37fb02788b72471051"
         },
         "GBT33190-2016.zh_CN.md": {
-          "origin": "transcribed from GBT33190-2016.pdf by SteleOFD scripts/pdf_to_markdown.py",
+          "origin": "transcribed from GBT33190-2016.pdf by scripts/pdf_to_markdown.py",
           "bytes": 143793,
           "sha256": "9d738885f7f15fd0c58bb9c198fae775e0c4739aeab91a2e19a9f529906a46e1",
           "note": "UTF-8, the text in Chinese as the standard prints it. 107 numbered headings, 73 tables, 25 schema listings."
+        },
+        "scripts/pdf_to_markdown.py": {
+          "origin": "written for this repository, to transcribe GBT33190-2016.pdf",
+          "bytes": 35819,
+          "sha256": "20b1753931549b34ebf52f73f91e37e3125ac779114be335b172ff832b53dffa",
+          "note": "Reproduces GBT33190-2016.zh_CN.md from GBT33190-2016.pdf byte for byte."
         }
       }
     }
