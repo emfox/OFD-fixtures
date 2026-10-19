@@ -7,7 +7,7 @@ ofdrw/
   Files:   test resources of the ofdrw modules, copied unmodified. The
            per-file origin paths are recorded in manifest.json.
 
-gb-t-33190/
+gbt33190-samples/
   Source:  https://gitcode.com/open-source-toolkit/886653
            announced at
            https://blog.csdn.net/gitblog_09791/article/details/143283031
@@ -21,7 +21,7 @@ gb-t-33190/
            It contains ofd标准测试文件.zip, which contains the thirteen .ofd
            documents; both archives store their Chinese filenames as GBK.
 
-gb-t-33190-text/
+gbt33190-standard/
   Source:  GB/T 33190-2016, Information technology - Open fixed-layout
            document (OFD), issued 2016-10-13, effective 2017-05-01. The
            record of the standard is

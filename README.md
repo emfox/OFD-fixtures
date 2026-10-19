@@ -17,9 +17,9 @@ hashes against that manifest knows exactly what it parsed.
 
 ```
 ofdrw/                   22 files, 15 MB
-gb-t-33190/
+gbt33190-samples/
   Desktop.zip            11.6 MB   the publisher's archive, exactly as distributed
-gb-t-33190-text/
+gbt33190-standard/
   GBT33190-2016.pdf       4.8 MB   the standard, as issued
   GBT33190-2016.zh_CN.md  140 KB   a transcription of its text
   scripts/pdf_to_markdown.py       the transcription, written down
@@ -29,8 +29,8 @@ manifest.json
 | Set | Upstream | Licence |
 | --- | --- | --- |
 | `ofdrw/` | [ofdrw/ofdrw](https://github.com/ofdrw/ofdrw) | Apache-2.0 |
-| `gb-t-33190/` | [open-source-toolkit/886653](https://gitcode.com/open-source-toolkit/886653) | Conformance material published alongside GB/T 33190-2016 |
-| `gb-t-33190-text/` | [GB/T 33190-2016 on openstd.samr.gov.cn](https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AF6682D939116B6F5EED53D01A9DB5D) | None granted: the standard is not open-licensed |
+| `gbt33190-samples/` | [open-source-toolkit/886653](https://gitcode.com/open-source-toolkit/886653) | Conformance material published alongside GB/T 33190-2016 |
+| `gbt33190-standard/` | [GB/T 33190-2016 on openstd.samr.gov.cn](https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AF6682D939116B6F5EED53D01A9DB5D) | None granted: the standard is not open-licensed |
 
 ### ofdrw/
 
@@ -38,7 +38,7 @@ The reference Java implementation's own test resources, copied verbatim. The
 `origin` field of each entry in `manifest.json` gives the path it came from
 upstream, so a sample can always be traced back to the module that uses it.
 
-### gb-t-33190/
+### gbt33190-samples/
 
 The sample set distributed with the standard, stored as the one archive the
 publisher ships and nothing else:
@@ -74,7 +74,7 @@ Filenames carry the clause they exercise — `6.2.001 正常文件结构.ofd` is
 well-formed baseline, `6.1.004 Entry不合理压缩.ofd` a badly compressed archive,
 and so on.
 
-### gb-t-33190-text/
+### gbt33190-standard/
 
 The standard's own text: the issued PDF, and a Markdown transcription of it.
 
@@ -89,7 +89,7 @@ already lives.
 `scripts/pdf_to_markdown.py` — which lives here too, beside the PDF, because
 its only output is the standard's text. It is UTF-8 and holds the text in
 Chinese, as the standard prints it. Rebuilding it from the PDF above
-reproduces it byte for byte; see [the set's own README](gb-t-33190-text/README.md)
+reproduces it byte for byte; see [the set's own README](gbt33190-standard/README.md)
 for the command and for what the script has to do to read this PDF.
 
 What the transcription is held to:
@@ -135,7 +135,7 @@ here rather than there.
         }
       }
     },
-    "gb-t-33190": {
+    "gbt33190-samples": {
       "upstream": "https://gitcode.com/open-source-toolkit/886653",
       "page": "https://blog.csdn.net/gitblog_09791/article/details/143283031",
       "licence": "Published with GB/T 33190-2016 as conformance material.",
@@ -153,7 +153,7 @@ here rather than there.
 ```
 
 `origin` names where a file came from inside its upstream — a path for
-`ofdrw/`, the archive it was peeled out of for `gb-t-33190/`. `bytes` and
+`ofdrw/`, the archive it was peeled out of for `gbt33190-samples/`. `bytes` and
 `sha256` describe the file as stored here.
 
 ## Consuming this repository

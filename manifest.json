@@ -118,7 +118,7 @@
         }
       }
     },
-    "gb-t-33190": {
+    "gbt33190-samples": {
       "upstream": "https://gitcode.com/open-source-toolkit/886653",
       "page": "https://blog.csdn.net/gitblog_09791/article/details/143283031",
       "licence": "Published with GB/T 33190-2016 as conformance material.",
@@ -131,7 +131,7 @@
         }
       }
     },
-    "gb-t-33190-text": {
+    "gbt33190-standard": {
       "upstream": "GB/T 33190-2016 as published by SAC/TC 260",
       "page": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AF6682D939116B6F5EED53D01A9DB5D",
       "licence": "The standard is not open-licensed. It is stored here for reference and interoperability work, and is not redistributed under any licence this repository can grant.",
